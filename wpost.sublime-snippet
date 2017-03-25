@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+<?php
+ global \$more;
+        \$more = 0;
+  \$args = array(
+  'p' => 27, // id of a page, post, or custom type
+  'post_type' => 'any');
+  \$the_query = new WP_Query(\$args);
+  while ( \$the_query->have_posts() ) : \$the_query->the_post(); 
+?>
+  <p><?php the_excerpt(); ?></p>
+<?php 
+  endwhile; 
+  wp_reset_query();
+?>
+          ]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wppost</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>

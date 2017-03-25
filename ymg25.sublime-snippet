@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+div#.ym-wrapper>div#.ym-wbox>div#.ym-grid.linearize-level-1>(div#.ym-g25.ym-gl>div#.ym-gbox)+(div#.ym-g25.ym-gl>div#.ym-gbox)+(div#.ym-g25.ym-gl>div#.ym-gbox)+(div#.ym-g25.ym-gl>div#.ym-gbox)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ymg25</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

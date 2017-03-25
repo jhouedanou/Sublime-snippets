@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<body style="background:black;color:green;font-family:'Anonymous Pro';font-weight:bold;padding:10px;font-size:18px;line-height:25px"></body>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bodyterm</tabTrigger>-->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

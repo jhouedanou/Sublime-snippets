@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+<?php
+                  if ( has_post_thumbnail()) {
+                    the_post_thumbnail('large', array('class' => 'flexible'));
+                  }
+                ?>
+  ]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wpthumbnailclass</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

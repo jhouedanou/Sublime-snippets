@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+   <?php echo theme('image', array('path' => drupal_get_path('theme', 'rcliane').'/images/Untitled1.png')); ?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>imgdrupal</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

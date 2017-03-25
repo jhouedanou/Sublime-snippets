@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+ <ul id="bannerslider" class="cycle-slideshow" data-cycle-slides="li">
+                        <?php
+                         \$args = array( 'cat'=> 2, 'showposts'=> 5);
+                         \$boucle = new WP_Query( \$args );
+                        while ( \$boucle ->have_posts() ) : \$boucle ->the_post();
+                        ?>
+                        <li><?php if ( has_post_thumbnail()) { the_post_thumbnail('full', array('class' => 'riches flexible'));}?><div class="banner-infors"><?php the_title(); ?></div></li>
+                         <?php
+                            endwhile;
+                            wp_reset_query(); // Remember to reset
+                        ?>
+                    </ul>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wpslider</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<?php
+							      wp_nav_menu(array(
+								  'menu' => 'Main Navigation',
+								  'container_id' => 'cssmenu',
+								  'menu_class' =>' ',
+								  'menu_id'=>' ',
+								  'walker' => new CSS_Menu_Maker_Walker()
+								  'theme_location' => 'Top' 
+							      ));
+							  ?>
+]]></content>
+	<tabTrigger>wpmenu</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>

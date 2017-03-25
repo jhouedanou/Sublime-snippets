@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+       filter: alpha(opacity=100); /* internet explorer */
+       	-khtml-opacity: 1;      /* khtml, old safari */
+       	-moz-opacity: 1;       /* mozilla, netscape */
+       	opacity: 1;           /* fx, safari, opera */
+       	]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>opacity1</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

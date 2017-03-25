@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<?php
+  \$args = array(
+  'p' => 52, 
+  'post_type' => 'any');
+  \$my_posts = new WP_Query(\$args);
+?>
+<?php
+  the_excerpt();
+?>
+]]></content>
+	<tabTrigger>wpsingle</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>

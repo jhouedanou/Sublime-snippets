@@ -1,0 +1,91 @@
+<snippet>
+	<content><![CDATA[
+    <div id="futebol" class="ym-g50 ym-gl rubrique">
+   <div class="ym-gbox">
+     <!--a la une -->
+    <?php 
+      $categoryname1 = get_cat_name(12);
+      $category_link1 = get_category_link(12);
+     ?>
+    <h2 class="title"><?php echo($categoryname1); ?></h2>
+    <div class="alaune newsblock">
+      <?php
+        $args3 = array( 'cat'=> 12, 'posts_per_page'=> 1);
+        $loop3 = new WP_Query( $args3 );
+        while ( $loop3->have_posts() ) : $loop3->the_post();
+          $do_not_duplicate = $post->ID; //This is the magic line
+      ?>
+      <div class="entry-image">
+          <div class="overlayarticle">
+                <a class="btn btn-primary btn-sm" href="<?php the_permalink(); ?>">Voir l'article</a>
+          </div>
+          <a href="<?php the_permalink(); ?> "><?php the_post_thumbnail(); ?></a>
+      </div>
+      <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+      <div class="entry-meta small ym-grid">
+          <div id="heur" class="ym-g25 ym-gl">
+            <div class="ym-g20 ym-gl">
+              <i class="fa fa-clock-o"></i>
+            </div>
+            <div class="ym-g80 ym-gl">
+              <p class="jeanrene"><?php the_time(); ?></p>
+            </div>                            
+          </div>
+          <div id="cale" class="ym-g75 ym-gr">
+              <div class="ym-g20 ym-gl">
+                <i class="fa fa-calendar"></i> 
+              </div>
+              <div class="ym-g80 ym-gl">
+                 <p class="jeanrene"><?php echo get_the_date(); ?></p>   
+              </div>
+          </div>
+       </div>
+       <?php
+        endwhile;
+        wp_reset_query(); // Remember to reset
+      ?>
+
+    </div>                       
+     <!--a la deux-->
+    <div class="aladeux">
+      <?php
+        $args3 = array( 'cat'=> 12, 'posts_per_page'=> 4);
+        $loop3 = new WP_Query( $args3 );
+        while ( $loop3->have_posts() ) : $loop3->the_post();
+        if( $post->ID == $do_not_duplicate ) continue; //This is the Magic Line
+      ?>
+     <div class="zaz">
+      <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+        <div class="entry-meta small ym-grid">
+            <div id="heur" class="ym-g25 ym-gl">
+              <div class="ym-g20 ym-gl">
+                <i class="fa fa-clock-o"></i>
+              </div>
+              <div class="ym-g80 ym-gl">
+                <p class="jeanrene"><?php the_time(); ?></p>
+              </div>                            
+            </div>
+            <div id="cale" class="ym-g75 ym-gr">
+                <div class="ym-g20 ym-gl">
+                  <i class="fa fa-calendar"></i> 
+                </div>
+                <div class="ym-g80 ym-gl">
+                   <p class="jeanrene"><?php echo get_the_date(); ?></p>   
+                </div>
+            </div>
+         </div>   
+     </div>                       
+       <?php
+        endwhile;
+        wp_reset_query(); // Remember to reset
+      ?>
+    </div>
+
+   </div>
+ </div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rubrique</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<?php 
+	\$my_query = new WP_Query( array( 'post_type' => 'wpsc-product', 'wpsc_product_category'=>'mycategory' ) );
+	while( \$my_query->have_posts() ) : \$my_query->the_post();?>
+	<a href="<?php echo get_permalink( \$product->ID ); ?>" title="<?php echo get_the_title( \$product->ID ); ?>"><h2><?php the_title();?></h2>
+ <img src="<?php echo wpsc_the_product_thumbnail(get_option('product_image_width'),get_option('product_image_height'),'','single'); ?>" alt="<?php the_title();?>"/></a>
+<?php endwhile; wp_reset_query();?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wpecloop</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

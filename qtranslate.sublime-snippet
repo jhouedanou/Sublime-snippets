@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+ <?php 
+                      if (qtranxf_getLanguage() == 'fr') { ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Pouget rail</a> - Tous droits réservés
+                    <?php
+                      } elseif (qtranxf_getLanguage() == 'en') {?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Pouget rail</a> - All Rights Reserved
+                    <?php   
+                      }
+                    ?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>qtranslate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+ add_image_size( 'homepageslider', 1920, 687, true ); 
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wpimgsize</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

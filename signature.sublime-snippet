@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<!-- 
+################################################
+##                                            ##
+## Template développé par jean luc Houedanou  ## 
+##        jeanluc@houedanou.com               ##
+##        wwww.houedanou.com                  ##
+##                                            ## 
+################################################
+-->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>signature</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

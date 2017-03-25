@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+		<?php
+  			\$args = array( 'cat'=> 2);
+  			\$loop = new WP_Query( \$args );
+  			if (\$loop->have_posts()){?>
+		 	<ul> 
+	  			<?php while ( \$loop->have_posts() ) : \$loop->the_post();?>
+		       	<li>
+		                <h2><?php the_title(); ?></h2>
+		                <?php the_content(); ?>
+    			</li>
+  		 	<?php endwhile;?>
+  		 	</ul>
+  		 	<?php 
+	  			}else{
+	  			//echo('qsqs');	
+	  			}
+	  			wp_reset_query(); // Remember to reset
+	  		?>   
+]]></content>
+	<tabTrigger>wploop</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>

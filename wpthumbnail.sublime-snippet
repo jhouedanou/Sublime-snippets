@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<?php
+						if ( has_post_thumbnail()) {
+							the_post_thumbnail('full', array('class' => 'riches'));
+						}
+					?>
+]]></content>
+	<tabTrigger>wpthumb</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>

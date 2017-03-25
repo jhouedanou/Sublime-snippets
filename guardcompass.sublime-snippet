@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+group :development do
+  guard :livereload do
+    watch(%r{.+\.(css|js|html?)$})
+  end
+
+  if File.exists?("./config.rb")
+    # Compile on start.
+    puts `compass compile --time --quiet`
+    guard :compass do
+      watch(%r{(.*)\.s[ac]ss$})
+    end
+  end
+end
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>guardcompass</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

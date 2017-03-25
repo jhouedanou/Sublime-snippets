@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+<?php
+if ( is_home() ) {
+    // This is the blog posts index
+  
+} else {
+    // This is not the blog posts index
+  
+}
+?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ishome</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

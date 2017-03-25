@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+ <?php
+                \$wpcats = wp_get_post_categories( \$post->ID );
+                \$cats = array();
+                    foreach (\$wpcats as \$c) {
+                    \$cats[] = '<div class="guncontrol'. get_cat_ID(get_cat_name( \$c )).'">'.get_cat_name( \$c ).'</div>';
+                    }
+                \$lister = implode(\$cats);
+                echo \$lister;
+            ?>]]>
+                                                  </content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wpcatid</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

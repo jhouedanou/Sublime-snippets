@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+		<a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="sprite sprite-logoacolonie"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/></a>
+						<div class="description" style="display:none"><?php bloginfo( 'description' ); ?></div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wplogo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+ function YOURTHEMENAME_menu_link($variables) {
+
+  \$element = \$variables['element'];
+  \$sub_menu = '';
+
+  if (\$element['#href'] == '' && drupal_is_front_page()) {
+    \$element['#attributes']['class'][] = 'active-trail';
+  }
+
+  if (\$element['#below']) {
+    \$sub_menu = drupal_render(\$element['#below']);
+  }
+  \$output = l(\$element['#title'], \$element['#href'], \$element['#localized_options']);
+  return '' . \$output . \$sub_menu . "\n";
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>activetrailhome</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

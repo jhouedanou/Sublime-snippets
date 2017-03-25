@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+<ul>
+<?php
+   \$wpcats2 = wp_get_post_categories( \$post->ID );
+    \$cats2 = array();
+        foreach (\$wpcats2 as \$c) {
+        \$cats2[] = '<li class="lacategoriel'.get_cat_ID(get_cat_name(\$c)).'"><a href="'.get_category_link(\$c).'">'.get_cat_name(\$c).'</a></li>';
+        }
+    \$listerz = implode(\$cats2);
+    echo \$listerz;
+?>
+</ul>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wppostcat</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

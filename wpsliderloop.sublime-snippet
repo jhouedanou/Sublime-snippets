@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+<?php
+			\$args2 = array( 'cat'=> 7, 'showposts'=> 3);
+			\$loop2 = new WP_Query( \$args2 );
+			while ( \$loop2->have_posts() ) : \$loop2->the_post();
+		?>
+		<li class="slidecontent nomp">
+			<div class="parallax-container">
+				<div class="parallax">
+					<?php
+						if ( has_post_thumbnail()) {
+							the_post_thumbnail('full', array('class' => 'riches'));
+						}
+					?>
+				</div>
+			</div>
+			<div class="infos ym-wrapper">
+				<div class="infor ym-wbox">
+					<h3 id="obi" class="center-align"><a class="orange lighten-1 text-white robotoslab" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<div class="infotext green darken-3 white-text">
+						<?php the_excerpt(); ?>
+					</div>
+				</div>
+			</div>
+		</li>
+		 <?php
+			endwhile;
+			wp_reset_query(); // Remember to reset
+		?>
+]]></content>
+	<tabTrigger>wpsliderloop</tabTrigger>
+	<!--<scope>source.php</scope>-->
+</snippet>
