@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+  \$date_d = get_field('jalon');
+                    \$y = substr(\$date_d, 0, 4);
+                    \$m = substr(\$date_d, 4, 2);
+                    \$d = substr(\$date_d, 6, 2);
+                    \$time_d = strtotime("{\$d}-{\$m}-{\$y}");
+                    echo date('Y', \$time_d);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>acfdate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
